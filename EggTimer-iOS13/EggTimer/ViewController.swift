@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     var eggTimes = [
         "Soft": 5,
@@ -19,6 +21,8 @@ class ViewController: UIViewController {
     ]
     
     var remainingSeconds: Int = 0
+    var originalTime: Int = 0
+    var player: AVAudioPlayer!
     
     var timer = Timer()
     
@@ -36,7 +40,11 @@ class ViewController: UIViewController {
 //            print(hardTime)
 //        }
         
+        titleLabel.text = hardness
+        
         remainingSeconds = eggTimes[hardness!]!
+        
+        originalTime = remainingSeconds
         
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(countdownTimer), userInfo: nil, repeats: true)
         
@@ -44,12 +52,22 @@ class ViewController: UIViewController {
     
     @objc func countdownTimer() {
         if(remainingSeconds > 0) {
-            print("\(remainingSeconds) seconds.")
             remainingSeconds -= 1
+            let progress = (Float(originalTime) - Float(remainingSeconds)) / Float(originalTime)
+            print(progress)
+            print("\(remainingSeconds) seconds.")
+            progressBar.progress = progress
         } else {
             timer.invalidate()
             titleLabel.text = "Done!"
+            playSound()
         }
+    }
+    
+    func playSound(){
+        let soundFileURL = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: soundFileURL!)
+        player.play()
     }
 
 }
