@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Cb-vL-vcG">
+                                <rect key="frame" x="0.0" y="44" width="428" height="838"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohm-TU-by7">
+                                        <rect key="frame" x="54" y="0.0" width="320" height="419"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Eyepax-d-Logo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="jfV-Er-gGF">
+                                                <rect key="frame" x="8" y="0.0" width="304" height="419"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="jfV-Er-gGF" firstAttribute="leading" secondItem="ohm-TU-by7" secondAttribute="leading" constant="8" id="5AS-zC-wz5"/>
+                                            <constraint firstItem="jfV-Er-gGF" firstAttribute="centerX" secondItem="ohm-TU-by7" secondAttribute="centerX" id="Erj-ff-x5A"/>
+                                            <constraint firstItem="jfV-Er-gGF" firstAttribute="top" secondItem="ohm-TU-by7" secondAttribute="top" id="HVA-Tq-bcw"/>
+                                            <constraint firstAttribute="bottom" secondItem="jfV-Er-gGF" secondAttribute="bottom" id="Ham-jk-EB4"/>
+                                            <constraint firstItem="jfV-Er-gGF" firstAttribute="centerY" secondItem="ohm-TU-by7" secondAttribute="centerY" id="h6q-pk-lC6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2d-oa-I02">
+                                        <rect key="frame" x="94" y="419" width="240" height="419"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eyepax iOS Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSu-zy-6Mr">
+                                                <rect key="frame" x="52.333333333333343" y="199.33333333333337" width="135.66666666666666" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="LSu-zy-6Mr" firstAttribute="centerY" secondItem="t2d-oa-I02" secondAttribute="centerY" id="lty-Ex-a1f"/>
+                                            <constraint firstItem="LSu-zy-6Mr" firstAttribute="centerX" secondItem="t2d-oa-I02" secondAttribute="centerX" id="oaY-v3-jqf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Cb-vL-vcG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ptc-gj-fQg"/>
+                            <constraint firstItem="5Cb-vL-vcG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Y3x-dQ-qbB"/>
+                            <constraint firstItem="5Cb-vL-vcG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="a5J-Ds-5Di"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Cb-vL-vcG" secondAttribute="trailing" id="fgm-iA-guA"/>
+                            <constraint firstItem="5Cb-vL-vcG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="k0B-Xe-U3J"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Eyepax-d-Logo (1)" width="166.66667175292969" height="46.333332061767578"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

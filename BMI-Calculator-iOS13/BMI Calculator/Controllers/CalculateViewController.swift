@@ -41,6 +41,8 @@ class CalculateViewController: UIViewController {
         if segue.identifier == "goToResults" {
             let destinationVC = segue.destination as! ResultsViewController
             destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advise = calculatorBrain.getAdvise()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
     
